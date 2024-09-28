@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sedmaya praktika</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+    <!--1 -->
+  
+    <button class="btn">Скрыть</button>
+    <script>
+        document.querySelector('.btn').addEventListener('click', function btnNone() {
+            this.style.display = 'none';
+        })
+    </script>
+<br>
+<br>
+<!-- 2 -->
+
+    <div id="text">Тоже скрыть</div>
+    <button onclick="divNone()">
+        Скрыть текст
+    </button>
+    <script>
+    let textDiv = document.getElementById('text');
+    function divNone() {
+    textDiv.style.display = 'none';}
+    </script>
+<br>
+<br>
+    <div id="text-btn">Меня нужно скрыть а потом показать</div>
+    <button class="btn-two" onclick="Btn()">Скрыть текст </button>
+    <script>
+        function Btn() {
+            let textBtnDiv = document.getElementById('text-btn');
+            if (textBtnDiv.style.display == 'block') {
+                textBtnDiv.style.display = 'none';
+            } else {
+                textBtnDiv.style.display = 'block';
+            }
+        }
+
+    </script>
+
+<br><br>
+<!--3  -->
+ </body> 
+    <body style="height:2000px">
+        <!-- Нажмите в любое место для перемещени.
+          <img src="https://ru.js.cx/clipart/ball.svg" id="ball"> -->
+     
+    <p>Нажмите в любое место</p>
+    <img src="https://ru.js.cx/clipart/ball.svg" id="ball">
+
+    <script>
+        document.addEventListener('click', (event) => {
+            ball.style.left = `${event.clientX - 25}px`;
+            ball.style.top = `${event.clientY - 25}px`;
+        });
+    </script>
+    
+    </body>
+</html>
